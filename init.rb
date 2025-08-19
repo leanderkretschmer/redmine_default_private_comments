@@ -45,10 +45,11 @@ class AfterPluginsLoadedHook < Redmine::Hook::Listener
 end
 
 Redmine::Plugin.register :redmine_default_private_comments do
-  name "Redmine Default Private Comments"
-  author "Intera GmbH"
-  description "This plugin makes comments private by default."
-  version "0.1.0"
-  url "https://github.com/Intera/redmine_default_private_comments"
+  name 'Redmine Default Private Comments'
+  author 'Leander Kretschmer'
+  description 'Setzt die Checkbox „Privater Kommentar“ standardmäßig'
+  version '1.0.0'
+  url 'https://github.com/leanderkretschmer/redmine_default_private_comments'
+  author_url 'https://github.com/leanderkretschmer'
   requires_redmine :version_or_higher => "6.0.0"
 end
