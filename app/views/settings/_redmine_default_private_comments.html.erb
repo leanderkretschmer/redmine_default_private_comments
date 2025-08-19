@@ -1,0 +1,16 @@
+<%# Admin-Plugin-Einstellungen für redmine_default_private_comments %>
+<p>
+  <label for="settings_enabled">Plugin global aktivieren</label><br/>
+  <%= hidden_field_tag 'settings[enabled]', '0' %>
+  <%= check_box_tag 'settings[enabled]', '1', settings['enabled'].to_s != '0' %>
+</p>
+
+<p>
+  <label for="settings_project_based">Projektbasierte Aktivierung verwenden</label><br/>
+  <%= hidden_field_tag 'settings[project_based]', '0' %>
+  <%= check_box_tag 'settings[project_based]', '1', settings['project_based'].to_s == '1' %>
+  <br/>
+  <small>
+    Wenn aktiviert, greift das Plugin nur in Projekten mit aktiviertem Projektmodul „Default Private Comments“ (Projekt → Einstellungen → Module).
+  </small>
+</p>

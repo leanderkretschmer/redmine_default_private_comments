@@ -8,6 +8,13 @@ Ein Plugin für [Redmine](https://www.redmine.org/), das die Checkbox „Private
 - Keine Änderungen am Rechtesystem von Redmine
 - Kompatibel mit Redmine 5.x und 6.x
 
+## Einstellungen
+
+Ab Version 0.3.0 bietet das Plugin Konfigurationsmöglichkeiten im Adminbereich:
+
+- Globale Aktivierung: Gesamtfunktion an-/abschalten
+- Projektbasierte Aktivierung: Wenn aktiv, wirkt das Plugin nur in Projekten, in denen das Projektmodul „Default Private Comments“ aktiviert ist (Projekt → Einstellungen → Module)
+
 ## Installation
 
 ### 1. Docker / Containerfile

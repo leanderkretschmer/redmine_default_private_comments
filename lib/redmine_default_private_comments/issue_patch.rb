@@ -9,12 +9,17 @@ module RedmineDefaultPrivateComments
 
     def set_private_notes_default
       if new_record? && self.respond_to?(:user) && self.respond_to?(:project)
-        self.private_notes = user.allowed_to?(:set_notes_private, project)
+        if RedmineDefaultPrivateComments.enabled_for_project?(project)
+          self.private_notes = user.allowed_to?(:set_notes_private, project)
+        end
       end
       super if defined?(super)
     end
 
     def private_notes_or_default
+      unless RedmineDefaultPrivateComments.enabled_for_project?(project)
+        return @current_journal&.private_notes
+      end
       @current_journal&.private_notes || User.current.allowed_to?(:set_notes_private, project)
     end
   end
