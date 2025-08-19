@@ -61,7 +61,7 @@ Redmine::Plugin.register :redmine_default_private_comments do
   name 'Redmine Default Private Comments'
   author 'Leander Kretschmer'
   description 'Aktiviert die Checkbox „Privater Kommentar“ standardmäßig, wenn der Nutzer berechtigt ist.'
-  version '1.0.0'
+  version '0.2.3'
   url 'https://github.com/leanderkretschmer/redmine_default_private_comments'
   author_url 'https://github.com/leanderkretschmer'
   requires_redmine version_or_higher: '6.0.0'
